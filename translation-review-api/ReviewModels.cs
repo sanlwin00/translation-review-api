@@ -41,5 +41,26 @@ namespace translation_review_api
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
     }
+    public class User
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonElement("_id"), JsonPropertyName("_id")]
+        public ObjectId Id { get; set; }
+        public string Username { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty; // Store hashed password in production
+        public string Language { get; set; } = "all";
+    }
+
+    public class LoginRequest
+    {
+        [JsonPropertyName("username")]
+        public string Username { get; set; } = string.Empty;
+        [JsonPropertyName("password")]
+        public string Password { get; set; } = string.Empty;
+        [JsonPropertyName("selectedLanguage")]
+        public string SelectedLanguage { get; set; } = string.Empty;
+    }
+
 
 }

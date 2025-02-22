@@ -1,0 +1,14 @@
+[
+  { "_id": { "$oid": "65d123456789abcdef000001" }, "username": "guest", "password": "PowerGuest21", "language": "all" },
+  { "_id": { "$oid": "65d123456789abcdef000002" }, "username": "admin", "password": "Royal4U!", "language": "all" },
+  { "_id": { "$oid": "65d123456789abcdef000003" }, "username": "arabic01", "password": "Tiger1234", "language": "ar" },
+  { "_id": { "$oid": "65d123456789abcdef000004" }, "username": "french01", "password": "Falcon5678", "language": "fr" },
+  { "_id": { "$oid": "65d123456789abcdef000005" }, "username": "spanish01", "password": "Whisper9101", "language": "es" },
+  { "_id": { "$oid": "65d123456789abcdef000006" }, "username": "german01", "password": "Echo1122", "language": "de" },
+  { "_id": { "$oid": "65d123456789abcdef000007" }, "username": "italian01", "password": "Mystic3344", "language": "it" },
+  { "_id": { "$oid": "65d123456789abcdef000008" }, "username": "chinese01", "password": "Dragon1234", "language": "zh" },
+  { "_id": { "$oid": "65d123456789abcdef000009" }, "username": "japanese01", "password": "Samurai5678", "language": "jp" },
+  { "_id": { "$oid": "65d123456789abcdef00000a" }, "username": "indonesian01", "password": "Garuda9101", "language": "id" },
+  { "_id": { "$oid": "65d123456789abcdef00000b" }, "username": "hindi01", "password": "Bollywood1122", "language": "hi" },
+  { "_id": { "$oid": "65d123456789abcdef00000c" }, "username": "tamil01", "password": "Chola3344", "language": "ta" }
+]

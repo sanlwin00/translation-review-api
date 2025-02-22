@@ -122,6 +122,24 @@ app.MapGet("/reviews/{username}", async (string username, IMongoDatabase databas
     }
 });
 
+app.MapPost("/login", async (LoginRequest request, IMongoDatabase database) =>
+{
+    var usersCollection = database.GetCollection<User>("ReviewUsers");
+
+    var user = await usersCollection.Find(u => u.Username == request.Username).FirstOrDefaultAsync();
+
+    if (user == null || user.Password != request.Password) // Use hashed password comparison in production
+    {
+        return Results.BadRequest(new { Message = "Invalid username or password" });
+    }
+
+    if (user.Language != "all" && user.Language != request.SelectedLanguage)
+    {
+        return Results.BadRequest(new { message = "You can only select your assigned language!" });
+    }
+
+    return Results.Ok(new { username = user.Username, selectedLanguage = request.SelectedLanguage });
+});
 
 var version = builder.Configuration.GetValue<string>("ApiVersion");
 app.MapGet("/hello", () => $"Hello World! v{version}");
